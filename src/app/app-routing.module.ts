@@ -4,8 +4,11 @@ import { InitiatePositionComponent } from './pages/initiate-position/initiate-po
 import { PositionHistoryComponent } from './pages/position-history/position-history.component';
 
 const routes: Routes = [
+
   { path: "", component: InitiatePositionComponent },
+
   { path: 'position-history', component: PositionHistoryComponent }
+
 ];
 
 @NgModule({
