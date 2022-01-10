@@ -1,0 +1,84 @@
+<div class="wrapper wrapper-full-page " style="background-color: #f4f3ee;">
+    <div class="full-page section-image">
+        <div class="content">
+            <div class="container">
+                <div class="col-lg-4 col-md-6 ml-auto mr-auto">
+                    <form [formGroup]="kangarooForm" class="form" method="" action="">
+                        <div class="card card-login">
+                            <div class="card-header ">
+                                <div class="card-header ">
+                                    <h3 class="header text-center">KANGAROO</h3>
+                                </div>
+                            </div>
+                            <div class="card-body ">
+                                <p>FIRST KANGAROO</p>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="nc-icon nc-ruler-pencil"></i>
+                                        </span>
+                                    </div>
+                                    <input type="number" min="0" formControlName="first_position" class="form-control" placeholder="First Kangaroo Position">
+                                </div>
+                                <div class="mt-2" *ngIf="(kf.first_position.dirty || kf.first_position.touched) && kf.first_position.invalid">
+                                    <span class="text-danger" style="font-size: 13px;" *ngIf="kf.first_position.errors">
+                                        First Kangaroo Position is required.
+                                    </span>
+                                </div>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="nc-icon nc-pin-3"></i>
+                                        </span>
+                                    </div>
+                                    <input type="number" min="0" formControlName="first_jump" placeholder="First Kangaroo Jump" class="form-control">
+                                </div>
+                                <div class="mt-2" *ngIf="(kf.first_jump.dirty || kf.first_jump.touched) && kf.first_jump.invalid">
+                                    <span class="text-danger" style="font-size: 13px;" *ngIf="kf.first_jump.errors">
+                                        First Kangaroo Jump is required.
+                                    </span>
+                                </div>
+                                <p>SECOND KANGAROO</p>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="nc-icon nc-ruler-pencil"></i>
+                                        </span>
+                                    </div>
+                                    <input type="number" min="0" formControlName="second_position" class="form-control" placeholder="Second Kangaroo Position">
+                                </div>
+                                <div class="mt-2" *ngIf="(kf.second_position.dirty || kf.second_position.touched) && kf.second_position.invalid">
+                                    <span class="text-danger" style="font-size: 13px;" *ngIf="kf.second_position.errors">
+                                        Second Kangaroo Position is required.
+                                    </span>
+                                </div>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="nc-icon nc-pin-3"></i>
+                                        </span>
+                                    </div>
+                                    <input type="number" min="0" formControlName="second_jump" placeholder="Second Kangaroo Jump" class="form-control">
+                                </div>
+                                <div class="mt-2" *ngIf="(kf.second_jump.dirty || kf.second_jump.touched) && kf.second_jump.invalid">
+                                    <span class="text-danger" style="font-size: 13px;" *ngIf="kf.second_jump.errors">
+                                        Second Kangaroo Jump is required.
+                                    </span>
+                                </div>
+                                <br />
+                            </div>
+                            <div class="card-footer ">
+                                <button [disabled]="kangarooForm.invalid" (click)="checkValue()" class="btn btn-warning btn-round btn-block mb-3">Check
+                                    Value
+                                </button>
+                                <button routerLink="/position-history" class="btn btn-info btn-round btn-block mb-3">
+                                    View Position History
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
